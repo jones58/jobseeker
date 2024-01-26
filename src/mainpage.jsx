@@ -1,6 +1,8 @@
+import ConfettiComponent from "./confetti";
+
 const jobBoards = [
-  { name: "LinkedIn", website: "" },
-  { name: "Four Day Week", website: "" },
+  { name: "LinkedIn", website: "https://www.linkedin.com/jobs/" },
+  { name: "Four Day Week", website: "https://fourdayweek.co.uk/find-a-job/" },
   { name: "NHS Jobs", website: "https://beta.jobs.nhs.uk/candidate" },
   {
     name: "DWP find a job",
@@ -34,6 +36,7 @@ const jobBoards = [
   },
   { name: "Total Jobs", website: "https://www.totaljobs.com/" },
   { name: "Reed", website: "https://www.reed.co.uk/" },
+  { name: "Monster", website: "https://www.monster.co.uk/" },
   {
     name: "Museums",
     website:
@@ -58,6 +61,41 @@ const jobBoards = [
     website: "https://www.charityjob.co.uk/jobs-in-london",
   },
   { name: "TFL", website: "https://tfl.gov.uk/corporate/careers/" },
+  {
+    name: "Escape The City",
+    website:
+      "https://www.escapethecity.org/search/jobs?q=option-listing-type%253DJob%2526option-seniority%253DJunior%25C2%25B7Entry-level%2526query%253Ddeveloper",
+  },
+  { name: "F6s", website: "https://www.f6s.com/jobs" },
+  {
+    name: "Landing Jobs",
+    website:
+      "https://landing.jobs/jobs?location=London%2C+United+Kingdom+of+Great+Britain+and+Northern+Ireland&city=London&lr=50&hd=false&t_co=false&t_st=false",
+  },
+  { name: "Wellfound", website: "https://wellfound.com/jobs" },
+
+  { name: "Unicorn Hunt", website: "https://www.unicornhunt.io/" },
+  {
+    name: "Hired",
+    website: "https://hired.co.uk/",
+  },
+  { name: "Otta", website: "https://app.otta.com/jobs/" },
+  { name: "Jobserve", website: "https://www.jobserve.com/gb/en/Job-Search/" },
+  { name: "Upwork", website: "https://www.upwork.com/" },
+  {
+    name: "Dice",
+    website:
+      "https://www.dice.com/jobs?q=frontend&location=London,%20UK&latitude=51.5072178&longitude=-0.1275862&countryCode=GB&locationPrecision=City&radius=30&radiusUnit=mi&page=1&pageSize=20&language=en",
+  },
+  {
+    name: "JS Jobs",
+    website: "https://jsjobbs.com/jobs?country=uk&role=frontend%20developer",
+  },
+  {
+    name: "Power To Fly",
+    website:
+      "https://powertofly.com/jobs/?keywords=%22Frontend+Developer%22&location=London%2C+UK",
+  },
 ];
 
 const otherResources = [
@@ -69,15 +107,23 @@ const otherResources = [
     name: "Creative Lives In Progress",
     website: "https://www.creativelivesinprogress.com/opportunitiesboard",
   },
+  { name: "findatechjob", website: "https://www.findatechjob.com/" },
+  {
+    name: "siliconmilkround",
+    website: "https://www.siliconmilkroundabout.com/",
+  },
+  { name: "hackajob", website: "https://hackajob.com/talent" },
 ];
 
 function Mainpage() {
   return (
-    <div className="h-screen bg-slate-900 p-10 text-slate-200">
-      <h1 className="mb-8 text-center text-4xl font-bold">Jobseeker</h1>
-      <h3 className="mb-4 text-center text-lg">
-        A job board that refreshes every three days. Look through the job sites
-        and then come back to check again!
+    <div className="h-full min-h-screen bg-indigo-900 p-10 text-slate-200">
+      <h1 className="mb-8 text-center text-4xl font-bold">
+        London Frontend Jobs
+      </h1>
+      <h3 className="mb-4 text-center text-2xl">
+        A job board that refreshes every three days. Click to look through the
+        job sites and then come back to check again!
       </h3>
       <div className="flex flex-wrap justify-center">
         {jobBoards.map((jobBoard) => (
@@ -94,9 +140,27 @@ function Mainpage() {
           </a>
         ))}
       </div>
-      <h2 className="mb-8 text-center text-4xl font-bold">
+
+      <h2 className="mb-8 pt-5 text-center text-3xl font-bold">
         Some other resources to check out
       </h2>
+      <div className="flex flex-wrap justify-center">
+        {otherResources.map((otherResource) => (
+          <a
+            href={otherResource.website}
+            target="_blank"
+            rel="noreferrer"
+            key={otherResource.name}
+            className="m-2 inline-block"
+          >
+            <button className="transform rounded-lg bg-indigo-800 px-6 py-4 font-semibold text-slate-200 shadow-md transition hover:scale-105 hover:bg-indigo-900">
+              {otherResource.name}
+            </button>
+          </a>
+        ))}
+      </div>
+      {/* if local storage has 100 items, display a confetti component */}
+      {localStorage.length >= 100 && <ConfettiComponent />}
     </div>
   );
 }
