@@ -1,5 +1,3 @@
-import ConfettiComponent from "./confetti";
-
 const jobBoards = [
   { name: "LinkedIn", website: "https://www.linkedin.com/jobs/" },
   { name: "Four Day Week", website: "https://fourdayweek.co.uk/find-a-job/" },
@@ -117,7 +115,7 @@ const otherResources = [
 
 function Mainpage() {
   return (
-    <div className="h-full min-h-screen bg-indigo-900 p-10 text-slate-200">
+    <div className=" h-full min-h-screen bg-indigo-900 p-10 text-slate-200">
       <h1 className="mb-8 text-center text-4xl font-bold">
         London Frontend Jobs
       </h1>
@@ -159,10 +157,10 @@ function Mainpage() {
           </a>
         ))}
       </div>
-      {/* if local storage has 100 items, display a confetti component */}
-      {localStorage.length >= 100 && <ConfettiComponent />}
     </div>
   );
 }
 
 export default Mainpage;
+
+/* if local storage >=34, display confetti.  */

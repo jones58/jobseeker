@@ -5,5 +5,9 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: ["prettier-plugin-tailwindcss", "tailwind-classes-sorter"],
+  plugins: [
+    "prettier-plugin-tailwindcss",
+    "tailwind-classes-sorter",
+    "tailwindcss-animate",
+  ],
 };
