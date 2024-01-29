@@ -134,7 +134,10 @@ function Jobboards() {
                 className="m-2 inline-block"
               >
                 <button
-                  onClick={() => localStorage.setItem(jobsite.name, "visited")}
+                  onClick={() => {
+                    localStorage.setItem(jobsite.name, "visited");
+                    window.location.reload(false);
+                  }}
                   className="rounded-lg bg-pink-800 px-6 py-4 font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
                 >
                   {jobsite.name}
@@ -144,14 +147,19 @@ function Jobboards() {
           }
         })}
       </div>
-      {Object.keys(localStorage).length === jobsites.length ? null : (
+      {Object.keys(localStorage).length < jobsites.length ? (
         <button
-          onClick={() => openAllTabs(jobsites)}
+          onClick={() => {
+            openAllTabs(jobsites);
+            window.location.reload(false);
+          }}
           rel="noreferrer"
           className="m-8 rounded-lg bg-pink-800 p-8 font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
         >
           Open all
         </button>
+      ) : (
+        <p className="text-4xl font-bold">Come back tomorrow</p>
       )}
     </div>
   );
