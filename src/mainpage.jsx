@@ -35,6 +35,10 @@ function Mainpage() {
         back tomorrow to check again!
       </h3>
       <Jobboards />
+      <h3 className="mb-8 text-center text-2xl">
+        N.B. If open all doesn't work for you, please check your browser
+        settings to allow popups on this page.
+      </h3>
       <Resources />
     </div>
   );
