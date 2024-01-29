@@ -9,6 +9,7 @@ const otherResources = [
     website: "https://www.siliconmilkroundabout.com/",
   },
   { name: "Hackajob", website: "https://hackajob.com/talent" },
+  { name: "View my Github", website: "https://github.com/jones58" },
 ];
 
 function Resources() {

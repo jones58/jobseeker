@@ -170,8 +170,10 @@ function Jobboards() {
           </button>
         ) : (
           <div>
-            <p className="text-4xl font-bold">Completed! Come back tomorrow</p>
-            <ReactConfetti></ReactConfetti>
+            <p className="text-4xl font-bold">
+              Completed! Come back tomorrow 🌿
+            </p>
+            <ReactConfetti colors={["#7b238a"]}></ReactConfetti>
           </div>
         )}
       </motion.div>
