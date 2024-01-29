@@ -110,8 +110,6 @@ const jobsites = [
   },
 ];
 
-let notInLocalStorage = [];
-
 function openAllTabs(list) {
   list.forEach((item) => {
     window.open(item.website, "_blank");
@@ -136,7 +134,7 @@ function Jobboards() {
                 className="m-2 inline-block"
               >
                 <button
-                  onClick={() => localStorage.setItem(jobsite.name, "visited"), }
+                  onClick={() => localStorage.setItem(jobsite.name, "visited")}
                   className="rounded-lg bg-pink-800 px-6 py-4 font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
                 >
                   {jobsite.name}
