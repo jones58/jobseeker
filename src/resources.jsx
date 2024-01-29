@@ -1,18 +1,14 @@
 const otherResources = [
   {
-    name: "Hacker News",
-    website: "https://bernawil.github.io/hn-who-is-hiring/",
-  },
-  {
     name: "Creative Lives In Progress",
     website: "https://www.creativelivesinprogress.com/opportunitiesboard",
   },
-  { name: "findatechjob", website: "https://www.findatechjob.com/" },
+  { name: "Find A Tech Job", website: "https://www.findatechjob.com/" },
   {
-    name: "siliconmilkround",
+    name: "Silicon Milkround",
     website: "https://www.siliconmilkroundabout.com/",
   },
-  { name: "hackajob", website: "https://hackajob.com/talent" },
+  { name: "Hackajob", website: "https://hackajob.com/talent" },
 ];
 
 function Resources() {
@@ -30,7 +26,7 @@ function Resources() {
             key={otherResource.name}
             className="m-2 inline-block"
           >
-            <button className="transform rounded-lg bg-indigo-800 px-6 py-4 font-semibold text-slate-200 shadow-md transition hover:scale-105 hover:bg-indigo-900">
+            <button className="transform rounded-lg bg-fuchsia-800 px-6 py-4 font-semibold text-slate-200 shadow-md transition hover:scale-105 hover:bg-fuchsia-900">
               {otherResource.name}
             </button>
           </a>
