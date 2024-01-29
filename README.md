@@ -13,6 +13,8 @@ I read recently about Cory Doctorow's [unusual use of 100 or so open tabs](https
 
 - Used React and Vite. I really like using React for the ability to split a complex site into components. Whilst this is a relatively simple single-page site, the ability to split code into silos is very useful and keeps the code clean and organised.
 
+- Used Tailwind CSS for styling - again, a really quick solution that enables rapid prototyping.
+
 ## To do
 
 - remove from list when clicked - live. Use state to do this i think, maybe separate list.
@@ -20,7 +22,7 @@ I read recently about Cory Doctorow's [unusual use of 100 or so open tabs](https
 - dark mode/prefers light mode
 - add some animation on page launch,use: https://www.youtube.com/watch?v=a-OYWMb9BCk or
   (tailwindcss-animate plugin)[https://github.com/jamiebuilds/tailwindcss-animate] for animation.
-- deploy with netlify on https://jobseeker.jackkershaw.net
+- add to portfolio
 
 ## How to deploy
 
