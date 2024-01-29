@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import ReactConfetti from "react-confetti";
 
 const jobsites = [
   { name: "LinkedIn", website: "https://www.linkedin.com/jobs/" },
@@ -156,7 +157,7 @@ function Jobboards() {
             }
           })}
         </div>
-        {Object.keys(localStorage).length < jobsites.length ? (
+        {Object.keys(localStorage).length - 1 < jobsites.length ? (
           <button
             onClick={() => {
               openAllTabs(jobsites);
@@ -168,7 +169,10 @@ function Jobboards() {
             Open all
           </button>
         ) : (
-          <p className="text-4xl font-bold">Come back tomorrow</p>
+          <div>
+            <p className="text-4xl font-bold">Completed! Come back tomorrow</p>
+            <ReactConfetti></ReactConfetti>
+          </div>
         )}
       </motion.div>
     </AnimatePresence>

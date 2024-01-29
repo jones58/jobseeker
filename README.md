@@ -16,6 +16,7 @@ I read recently about Cory Doctorow's [unusual use of 100 or so open tabs](https
 - Used Tailwind CSS for styling - again, a really quick solution that enables rapid prototyping.
 
 - Added animation with Framer Motion.
+- Added confetti with React Confetti.
 
 ## To do
 
