@@ -30,13 +30,13 @@ function Mainpage() {
         London Frontend Jobs
       </h1>
       <h3 className="mb-8 text-center text-2xl">
-        A job board that refreshes everyday. Click to check the job sites, come
-        back tomorrow to check again!
+        A job board that refreshes everyday. Click to check the job
+        sites, come back tomorrow to check again!
       </h3>
       <Jobboards />
       <h3 className="m-8 text-center">
-        N.B. If open all doesn't work for you, check your browser settings and
-        allow popups on this page.
+        N.B. If open all doesn't work for you, check your browser
+        settings and allow popups on this page.
       </h3>
       <Resources />
     </div>

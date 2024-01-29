@@ -100,7 +100,8 @@ const jobsites = [
   },
   {
     name: "JS Jobs",
-    website: "https://jsjobbs.com/jobs?country=uk&role=frontend%20developer",
+    website:
+      "https://jsjobbs.com/jobs?country=uk&role=frontend%20developer",
   },
   {
     name: "Power To Fly",
@@ -170,7 +171,7 @@ function Jobboards() {
           </button>
         ) : (
           <div>
-            <p className="text-4xl font-bold">
+            <p className="text-4xl font-bold text-center">
               Completed! Come back tomorrow 🌿
             </p>
             <ReactConfetti colors={["#7b238a"]}></ReactConfetti>
