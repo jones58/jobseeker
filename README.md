@@ -1,6 +1,6 @@
 # Jobseeker
 
-- A job board that refreshes every three days.
+- A job board that refreshes daily.
 - Built in React and Tailwind CSS, bootstrapped with Vite.
 
 ## Why?
@@ -9,10 +9,13 @@ I built this tool because I wanted a way to collect job sites. Initially, I trie
 
 I read recently about Cory Doctorow's [unusual use of 100 or so open tabs](https://pluralistic.net/2024/01/25/today-in-tabs/), as a way to check all the websites he wants to look through daily. I already have some tabs that open every time I open Firefox, so using this method for job sites seemed too overhwhelming - better to use a website I could edit and share with friends.
 
+## How i built it
+
+- Used React and Vite. I really like using React for the ability to split a complex site into components. Whilst this is a relatively simple single-page site, the ability to split code into silos is very useful and keeps the code clean and organised.
+
 ## To do
 
 - Remove from list when clicked
-- change daily (see the daily challenges site)
 - open all links button under job boards.
 - Confetti when opened all of them.
 - quiet mode, less options have to click more.
@@ -28,4 +31,4 @@ NPM run build - for production
 
 ## Contributions
 
-- I welcome any contributions to the project! Feel free to fork it if you want too - it's quite front-end/design focussed atm so would welcome a backend version.
+- I welcome any contributions to the project! Feel free to fork it if you want too - it's quite front-end/design focussed atm so would welcome a backend version. It could also be helpful for other industries.
