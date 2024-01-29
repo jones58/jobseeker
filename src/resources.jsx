@@ -15,7 +15,7 @@ function Resources() {
   return (
     <div>
       <h2 className="mb-8 pt-5 text-center text-3xl font-bold">
-        Other resources:
+        More resources:
       </h2>
       <div className="flex flex-wrap justify-center">
         {otherResources.map((otherResource) => (
