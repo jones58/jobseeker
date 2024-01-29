@@ -15,13 +15,11 @@ I read recently about Cory Doctorow's [unusual use of 100 or so open tabs](https
 
 - Used Tailwind CSS for styling - again, a really quick solution that enables rapid prototyping.
 
+- Added animation with Framer Motion.
+
 ## To do
 
-- remove from list when clicked - live. Use state to do this i think, maybe separate list.
 - Confetti when opened all of them.
-- dark mode/prefers light mode
-- add some animation on page launch,use: https://www.youtube.com/watch?v=a-OYWMb9BCk or
-  (tailwindcss-animate plugin)[https://github.com/jamiebuilds/tailwindcss-animate] for animation.
 - add to portfolio
 
 ## How to deploy

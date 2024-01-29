@@ -26,7 +26,7 @@ function Resources() {
             key={otherResource.name}
             className="m-2 inline-block"
           >
-            <button className="transform rounded-lg bg-fuchsia-800 px-6 py-4 font-semibold text-slate-200 shadow-md transition hover:scale-105 hover:bg-fuchsia-900">
+            <button className="transform rounded-lg bg-fuchsia-800 px-6 py-4 text-xl font-semibold text-slate-200 shadow-md transition hover:scale-105 hover:bg-fuchsia-900">
               {otherResource.name}
             </button>
           </a>

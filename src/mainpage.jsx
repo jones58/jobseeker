@@ -3,7 +3,6 @@ import Jobboards from "./jobboards";
 import Resources from "./resources";
 
 // reset local storage every day //
-
 function resetLocalStorage() {
   const date = new Date().toLocaleDateString();
   const savedDate = localStorage.getItem("date");
@@ -26,7 +25,7 @@ function Mainpage() {
   }, []);
 
   return (
-    <div className=" h-full min-h-screen bg-indigo-950 p-10 text-slate-200">
+    <div className="h-full min-h-screen bg-indigo-950 p-10 text-slate-200">
       <h1 className="mb-8 text-center text-5xl font-bold">
         London Frontend Jobs
       </h1>
@@ -35,9 +34,9 @@ function Mainpage() {
         back tomorrow to check again!
       </h3>
       <Jobboards />
-      <h3 className="mb-8 text-center text-2xl">
-        N.B. If open all doesn't work for you, please check your browser
-        settings to allow popups on this page.
+      <h3 className="mb-8 text-center text-xl">
+        N.B. If open all doesn't work for you, check your browser settings and
+        allow popups on this page.
       </h3>
       <Resources />
     </div>

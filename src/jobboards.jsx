@@ -1,3 +1,5 @@
+import { motion, AnimatePresence } from "framer-motion";
+
 const jobsites = [
   { name: "LinkedIn", website: "https://www.linkedin.com/jobs/" },
   {
@@ -119,49 +121,57 @@ function openAllTabs(list) {
 
 function Jobboards() {
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex flex-wrap justify-center">
-        {jobsites.map((jobsite) => {
-          if (localStorage.getItem(jobsite.name) === "visited") {
-            return null;
-          } else {
-            return (
-              <a
-                href={jobsite.website}
-                target="_blank"
-                rel="noreferrer"
-                key={jobsite.name}
-                className="m-2 inline-block"
-              >
-                <button
-                  onClick={() => {
-                    localStorage.setItem(jobsite.name, "visited");
-                    window.location.reload(false);
-                  }}
-                  className="rounded-lg bg-pink-800 px-6 py-4 font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
+    <AnimatePresence>
+      <motion.div
+        className="flex flex-col items-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="flex flex-wrap justify-center">
+          {jobsites.map((jobsite) => {
+            if (localStorage.getItem(jobsite.name) === "visited") {
+              return null;
+            } else {
+              return (
+                <a
+                  href={jobsite.website}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={jobsite.name}
+                  className="m-2 inline-block"
                 >
-                  {jobsite.name}
-                </button>
-              </a>
-            );
-          }
-        })}
-      </div>
-      {Object.keys(localStorage).length < jobsites.length ? (
-        <button
-          onClick={() => {
-            openAllTabs(jobsites);
-            window.location.reload(false);
-          }}
-          rel="noreferrer"
-          className="m-8 rounded-lg bg-pink-800 p-8 font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
-        >
-          Open all
-        </button>
-      ) : (
-        <p className="text-4xl font-bold">Come back tomorrow</p>
-      )}
-    </div>
+                  <button
+                    onClick={() => {
+                      localStorage.setItem(jobsite.name, "visited");
+                      window.location.reload(false);
+                    }}
+                    className="rounded-lg bg-pink-800 p-7 text-xl font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
+                  >
+                    {jobsite.name}
+                  </button>
+                </a>
+              );
+            }
+          })}
+        </div>
+        {Object.keys(localStorage).length < jobsites.length ? (
+          <button
+            onClick={() => {
+              openAllTabs(jobsites);
+              window.location.reload(false);
+            }}
+            rel="noreferrer"
+            className="m-8 rounded-lg bg-pink-800 p-8 text-2xl font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
+          >
+            Open all
+          </button>
+        ) : (
+          <p className="text-4xl font-bold">Come back tomorrow</p>
+        )}
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
