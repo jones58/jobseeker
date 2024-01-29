@@ -9,16 +9,14 @@ I built this tool because I wanted a way to collect job sites. Initially, I trie
 
 I read recently about Cory Doctorow's [unusual use of 100 or so open tabs](https://pluralistic.net/2024/01/25/today-in-tabs/), as a way to check all the websites he wants to look through daily. I already have some tabs that open every time I open Firefox, so using this method for job sites seemed too overhwhelming - better to use a website I could edit and share with friends.
 
-## How i built it
+## How I Built It
 
 - Used React and Vite. I really like using React for the ability to split a complex site into components. Whilst this is a relatively simple single-page site, the ability to split code into silos is very useful and keeps the code clean and organised.
 
 ## To do
 
-- Remove from list when clicked
-- open all links button under job boards.
+- remove from list when clicked - live. Use state to do this i think, maybe separate list.
 - Confetti when opened all of them.
-- quiet mode, less options have to click more.
 - dark mode/prefers light mode
 - add some animation on page launch,use: https://www.youtube.com/watch?v=a-OYWMb9BCk or
   (tailwindcss-animate plugin)[https://github.com/jamiebuilds/tailwindcss-animate] for animation.
