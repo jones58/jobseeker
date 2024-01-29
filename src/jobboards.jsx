@@ -35,7 +35,11 @@ const jobsites = [
     website:
       "https://www.jobs.ac.uk/search/?activeFacet=nonAcademicDisciplineFacet&sortOrder=1&pageSize=25&startIndex=1&nonAcademicDisciplineFacet%5B0%5D=web-design-and-development",
   },
-  { name: "Total Jobs", website: "https://www.totaljobs.com/" },
+  {
+    name: "Total Jobs",
+    website:
+      "https://www.totaljobs.com/jobs/frontend-developer/in-london?radius=20&searchOrigin=Resultlist_top-search",
+  },
   { name: "Reed", website: "https://www.reed.co.uk/" },
   { name: "Monster", website: "https://www.monster.co.uk/" },
   {
@@ -100,33 +104,57 @@ const jobsites = [
     website:
       "https://powertofly.com/jobs/?keywords=%22Frontend+Developer%22&location=London%2C+UK",
   },
+  {
+    name: "Hacker News Jobs",
+    website: "https://bernawil.github.io/hn-who-is-hiring/",
+  },
 ];
+
+let notInLocalStorage = [];
+
+function openAllTabs(list) {
+  list.forEach((item) => {
+    window.open(item.website, "_blank");
+    localStorage.setItem(item.name, "visited");
+  });
+}
 
 function Jobboards() {
   return (
-    <div className=" h-full min-h-screen bg-indigo-900 p-10 text-slate-200">
-      <h1 className="mb-8 text-center text-4xl font-bold">
-        London Frontend Jobs
-      </h1>
-      <h3 className="mb-4 text-center text-2xl">
-        A job board that refreshes everyday. Click to look through the job sites
-        and then come back tomorrow to check again!
-      </h3>
+    <div className="flex flex-col items-center">
       <div className="flex flex-wrap justify-center">
-        {jobsites.map((jobsite) => (
-          <a
-            href={jobsite.website}
-            target="_blank"
-            rel="noreferrer"
-            key={jobsite.name}
-            className="m-2 inline-block"
-          >
-            <button className="transform rounded-lg bg-pink-800 px-6 py-4 font-semibold text-slate-200 shadow-md transition hover:scale-105 hover:bg-pink-900">
-              {jobsite.name}
-            </button>
-          </a>
-        ))}
+        {jobsites.map((jobsite) => {
+          if (localStorage.getItem(jobsite.name) === "visited") {
+            return null;
+          } else {
+            return (
+              <a
+                href={jobsite.website}
+                target="_blank"
+                rel="noreferrer"
+                key={jobsite.name}
+                className="m-2 inline-block"
+              >
+                <button
+                  onClick={() => localStorage.setItem(jobsite.name, "visited"), }
+                  className="rounded-lg bg-pink-800 px-6 py-4 font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
+                >
+                  {jobsite.name}
+                </button>
+              </a>
+            );
+          }
+        })}
       </div>
+      {Object.keys(localStorage).length === jobsites.length ? null : (
+        <button
+          onClick={() => openAllTabs(jobsites)}
+          rel="noreferrer"
+          className="m-8 rounded-lg bg-pink-800 p-8 font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
+        >
+          Open all
+        </button>
+      )}
     </div>
   );
 }
