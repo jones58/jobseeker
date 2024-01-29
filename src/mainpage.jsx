@@ -26,7 +26,14 @@ function Mainpage() {
   }, []);
 
   return (
-    <div>
+    <div className=" h-full min-h-screen bg-indigo-950 p-10 text-slate-200">
+      <h1 className="mb-8 text-center text-4xl font-bold">
+        London Frontend Jobs
+      </h1>
+      <h3 className="mb-8 text-center text-2xl">
+        A job board that refreshes everyday. Click to look through the job sites
+        and then come back tomorrow to check again!
+      </h3>
       <Jobboards />
       <Resources />
     </div>
@@ -34,5 +41,3 @@ function Mainpage() {
 }
 
 export default Mainpage;
-
-/* if local storage >=34, display confetti.  */
