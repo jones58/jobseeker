@@ -9,13 +9,8 @@ const jobsites = [
   },
   { name: "NHS Jobs", website: "https://beta.jobs.nhs.uk/candidate" },
   {
-    name: "DWP find a job",
-    website: "https://findajob.dwp.gov.uk/search",
-  },
-  {
     name: "London IT Jobs",
-    website:
-      "https://findajob.dwp.gov.uk/search?cat=14&loc=86384&st=40000&sf=10000&sb=salary&sd=down",
+    website: "https://findajob.dwp.gov.uk/search?cat=14&loc=86384",
   },
   { name: "Grad Jobs", website: "https://giveagradago.com/" },
   { name: "The Dots", website: "https://the-dots.com/" },
