@@ -13,7 +13,11 @@ const jobsites = [
     website: "https://findajob.dwp.gov.uk/search?cat=14&loc=86384",
   },
   { name: "Grad Jobs", website: "https://giveagradago.com/" },
-  { name: "The Dots", website: "https://the-dots.com/" },
+  {
+    name: "The Dots",
+    website:
+      "https://the-dots.com/jobs/search?query=Web%20Developer&filters=job-type:Full%20Time.1|level:Junior.1^Mid%20Level.2^Senior.3|location:London%2C%20United%20Kingdom.70951&sortBy=latest",
+  },
   {
     name: "Work in Startups",
     website: "https://workinstartups.com/job-board/jobs/developers",
