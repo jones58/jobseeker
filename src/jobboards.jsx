@@ -114,13 +114,6 @@ const jobsites = [
   },
 ];
 
-function openAllTabs(list) {
-  list.forEach((item) => {
-    window.open(item.website, "_blank");
-    localStorage.setItem(item.name, "visited");
-  });
-}
-
 function Jobboards() {
   return (
     <AnimatePresence>
@@ -158,18 +151,8 @@ function Jobboards() {
             }
           })}
         </div>
-        {Object.keys(localStorage).length - 1 < jobsites.length ? (
-          <button
-            onClick={() => {
-              openAllTabs(jobsites);
-              window.location.reload(false);
-            }}
-            rel="noreferrer"
-            className="m-8 rounded-lg bg-pink-800 p-8 text-2xl font-semibold text-slate-100 shadow-md hover:scale-105 hover:bg-pink-900"
-          >
-            Open all
-          </button>
-        ) : (
+        {Object.keys(localStorage).length - 1 <
+        jobsites.length ? null : (
           <div>
             <p className="text-4xl font-bold text-center">
               Completed! Come back tomorrow 🌿
