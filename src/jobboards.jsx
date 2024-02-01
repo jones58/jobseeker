@@ -81,7 +81,6 @@ const jobsites = [
   },
   { name: "Wellfound", website: "https://wellfound.com/jobs" },
 
-  { name: "Unicorn Hunt", website: "https://www.unicornhunt.io/" },
   {
     name: "Hired",
     website: "https://hired.co.uk/",
