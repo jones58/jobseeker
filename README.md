@@ -27,3 +27,7 @@ NPM run build - for production
 ## Contributions
 
 - I welcome any contributions to the project! Feel free to fork it if you want too - it's quite front-end/design focussed atm so would welcome a backend version. It could also be helpful for other industries.
+
+## TO DO:
+
+- When new day, sometimes have to reload the page to get new set of sites because it's loading from cache. Fix this by forcing reload.
