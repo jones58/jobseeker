@@ -107,8 +107,21 @@ const jobsites = [
       "https://powertofly.com/jobs/?keywords=%22Frontend+Developer%22&location=London%2C+UK",
   },
   {
-    name: "Hacker News Jobs",
-    website: "https://bernawil.github.io/hn-who-is-hiring/",
+    name: "Searchability",
+    website:
+      "https://searchability.com/tech-jobs/?_job_country=united-kingdom",
+  },
+  {
+    name: "GetMyFirstJob",
+    website: "https://www.getmyfirstjob.co.uk/",
+  },
+  {
+    name: "Gradcracker",
+    website: "https://www.gradcracker.com/",
+  },
+  {
+    name: "NotGoingToUni",
+    website: "https://notgoingtouni.co.uk/",
   },
 ];
 
