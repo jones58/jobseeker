@@ -123,6 +123,10 @@ const jobsites = [
     name: "NotGoingToUni",
     website: "https://notgoingtouni.co.uk/",
   },
+  {
+    name: "If You Could",
+    website: "https://www.ifyoucouldjobs.com/",
+  },
 ];
 
 function Jobboards() {
