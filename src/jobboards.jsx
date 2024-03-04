@@ -127,6 +127,10 @@ const jobsites = [
     name: "If You Could",
     website: "https://www.ifyoucouldjobs.com/",
   },
+  {
+    name: "Antal Tech Jobs",
+    website: "https://antaltechjobs.com/",
+  },
 ];
 
 function Jobboards() {
