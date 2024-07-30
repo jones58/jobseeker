@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.17",
+    "framer-motion": "^11.2.13",
+    "postcss": "^8.4.33",
+    "react": "^18.2.0",
     "autoprefixer": "^10.4.19",
     "framer-motion": "^11.0.3",
     "postcss": "^8.4.39",
